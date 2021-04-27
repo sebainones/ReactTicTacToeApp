@@ -44,7 +44,7 @@ import './index.css';
       if (winner) {
         status = 'Winner: ' + winner;
       } else {
-        status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
+        status = 'Nexxxt player: ' + (this.state.xIsNext ? 'X' : 'O');
       }
   
       return (
