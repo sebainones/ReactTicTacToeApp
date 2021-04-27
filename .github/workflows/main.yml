@@ -31,6 +31,7 @@ jobs:
         run: |
           npm install
           npm run build
+      # I may use yarn build isntead of npm build. I don't know if githbu has this 
 
       # - name: Deploy 🚀
       #   uses: JamesIves/github-pages-deploy-action@4.0.0
