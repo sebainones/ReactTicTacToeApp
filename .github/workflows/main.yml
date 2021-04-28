@@ -29,10 +29,17 @@ jobs:
       # Runs a single command using the runners shell
       - name: Install and Build 🔧 # Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
         run: |
-          npm install
-          npm run build
+          # npm install
+          # npm run build
+          yarn          
+          yarn build
+      #To create a production build, use yarn build.
       # I may use yarn build isntead of npm build. I don't know if githbu has this 
 
+    # Run Jest tests!
+      - name: Run Jest tests
+        run: yarn test
+        
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.0.0
         with:
