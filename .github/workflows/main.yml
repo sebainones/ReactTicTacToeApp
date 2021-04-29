@@ -37,8 +37,11 @@ jobs:
       # I may use yarn build isntead of npm build. I don't know if githbu has this 
 
     # Run Jest tests!
-      - name: Run Jest tests
+      - name: Run  tests 🧪
         run: yarn test
+
+      # - name: Run Jest tests
+      #   yarn test:jest
         
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.0.0
