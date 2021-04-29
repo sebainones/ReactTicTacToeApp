@@ -9,13 +9,7 @@ function Square(props) {
     </button>
   );
 }
-function Circle(props) {
-  return (
-    <button>
-      {props}
-    </button>
-  );
-}
+
 
 // const Paragraph = ({ children }) => (
 //   <p>{children}</p>
