@@ -48,13 +48,15 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Basic variable usage 🔣
+      # MY_STEP_VARIABLE=mi variable inside step!
       - run: |
-          MY_STEP_VARIABLE=mi variable inside step!
+          
           echo "Hello ${{ github.event.inputs.name }}!"
           echo "on location ${{ github.event.inputs.home }}!"
           echo "message: ${{ env.SOME_ENV_MESSAGE }}"
           echo "on os: ${{ runner.os }}"
-          echo "with variable: ${{MY_STEP_VARIABLE }}"
+          
+        # echo "with variable: ${{MY_STEP_VARIABLE }}"
 
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
