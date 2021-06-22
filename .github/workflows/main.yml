@@ -11,16 +11,6 @@ on:
   pull_request:
      branches: [ main ]
 
-# name: Create our Weekly cron build pipeline 📅
-# on:
-#   schedule:
-#     - cron: '0 14 * * 1'
-
-# Define an environment variable across the entire workflow
-# TODO: I get some errores when I uncomment these 2 lines!
-# env:
-# BUILD_CONFIGURATION: Release
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
    inputs:
@@ -49,15 +39,11 @@ jobs:
     steps:
       - name: Basic variable usage 🔣
       # MY_STEP_VARIABLE=mi variable inside step!
-      - run: |
-          
+      - run: |          
           echo "Hello ${{ github.event.inputs.name }}!"
           echo "on location ${{ github.event.inputs.home }}!"
           echo "message: ${{ env.SOME_ENV_MESSAGE }}"
           echo "on os: ${{ runner.os }}"
-          
-        # echo "with variable: ${{MY_STEP_VARIABLE }}"
-
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout 🛎️
