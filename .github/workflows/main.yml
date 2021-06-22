@@ -38,7 +38,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Basic variable usage 🔣      
-      - run: |          
+        run: |
           echo "Hello ${{ github.event.inputs.name }}!"
           echo "on location ${{ github.event.inputs.home }}!"
           echo "message: ${{ env.SOME_ENV_MESSAGE }}"
