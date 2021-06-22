@@ -14,10 +14,6 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2
-
       # Runs a single command using the runners shell
       - name: Install and Build 🔧 # Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
         run: |
