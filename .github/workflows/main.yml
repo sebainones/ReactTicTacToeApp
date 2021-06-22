@@ -12,10 +12,10 @@ on:
     branches: [ main ]
 
 #Define an environment variable across the entire workflow
-env:
-  BUILD_CONFIGURATION: Release
+  env:
+    BUILD_CONFIGURATION: Release
 
-    schedule:
+  schedule:
     # * is a special character in YAML so you have to quote this string
     - cron:  '5 * * * *'
 
