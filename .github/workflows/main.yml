@@ -11,6 +11,10 @@ on:
   pull_request:
     branches: [ main ]
 
+#Define an environment variable across the entire workflow
+env:
+  BUILD_CONFIGURATION: Release
+
     schedule:
     # * is a special character in YAML so you have to quote this string
     - cron:  '5 * * * *'
@@ -37,15 +41,18 @@ jobs:
     
     #GitHub sets default environment variables that are available to every step in a workflow run.
     env:
-      SOME_MESSAGE: Have a nice CI/CD!
+      SOME_ENV_MESSAGE: Have a nice CI/CD!
     
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: Basic variable usage 🔣
       - run: |
+          MY_STEP_VARIABLE=mi variable inside step!
           echo "Hello ${{ github.event.inputs.name }}!"
-          echo "- location ${{ github.event.inputs.home }}!"
-          echo "message: ${{ env.SOME_MESSAGE }}"
-          echo "on ${{ runner.os }}"
+          echo "on location ${{ github.event.inputs.home }}!"
+          echo "message: ${{ env.SOME_ENV_MESSAGE }}"
+          echo "on os: ${{ runner.os }}"
+          echo "with variable: ${{MY_STEP_VARIABLE }}"
 
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
