@@ -37,8 +37,7 @@ jobs:
     
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Basic variable usage 🔣
-      # MY_STEP_VARIABLE=mi variable inside step!
+      - name: Basic variable usage 🔣      
       - run: |          
           echo "Hello ${{ github.event.inputs.name }}!"
           echo "on location ${{ github.event.inputs.home }}!"
