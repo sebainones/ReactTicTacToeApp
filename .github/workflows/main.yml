@@ -11,9 +11,11 @@ on:
   pull_request:
      branches: [ main ]
 
-    schedule:
-    # * is a special character in YAML so you have to quote this string
-    - cron:  '5 * * * *'
+
+name: Create our Weekly cron build pipeline 📅
+on:
+  schedule:
+    - cron: '0 14 * * 1'
 
 # Define an environment variable across the entire workflow
 # TODO: I get some errores when I uncomment these 2 lines!
