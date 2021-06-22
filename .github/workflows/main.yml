@@ -11,7 +11,7 @@ on:
   pull_request:
      branches: [ main ]
 
- name: Create our Weekly cron build pipeline 📅
+# name: Create our Weekly cron build pipeline 📅
   schedule:
     - cron: '0 14 * * 1'
 
