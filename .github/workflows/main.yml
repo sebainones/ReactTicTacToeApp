@@ -12,8 +12,9 @@ on:
     branches: [ main ]
 
 #Define an environment variable across the entire workflow
-  env:
-    BUILD_CONFIGURATION: Release
+#TODO: I get some errores when I uncomment these 2 lines!
+#env:
+#  BUILD_CONFIGURATION: Release
 
   schedule:
     # * is a special character in YAML so you have to quote this string
