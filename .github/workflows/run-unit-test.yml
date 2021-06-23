@@ -1,11 +1,11 @@
 name: run Tests  CI ⚙️
-'on':
-  pull_request:
-    branches:
-      - master
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  # will decide when this github action will be triggered
   push:
-    branches:
-      - master
+    branches: [ main ]
+  pull_request:
+     branches: [ main ]
 jobs:
   test:
     name: Run Unit Tests
