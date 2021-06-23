@@ -18,14 +18,13 @@ jobs:
        run: |
           echo "About to run Tests"
 
-      # Runs a single command using the runners shell
-      - name: Install and Build 🔧
-        run: |
+     - name: Install and Build 🔧
+       run: |
           # npm install
           # npm run build
           yarn          
           yarn build
           
-    # Run Jest tests!
-      - name: Run  tests 🧪
-        run: yarn test
+     # Run Jest tests!
+     - name: Run  tests 🧪
+       run: yarn test
