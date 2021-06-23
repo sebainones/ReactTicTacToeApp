@@ -15,7 +15,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
      - name: Just Some echo!
-        run: |
+       run: |
           echo "About to run Tests"
 
       # Runs a single command using the runners shell
