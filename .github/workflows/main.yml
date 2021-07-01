@@ -48,7 +48,7 @@ jobs:
           echo "on location ${{ github.event.inputs.home }}!"
           echo "message: "
           echo "on os: ${{ runner.os }}"${{ env.SOME_ENV_MESSAGE }}
-          echo "the scret value is :"" ${{ env.SOME_USED_SECRET }}
+          echo "the scret value is :" ${{ env.SOME_USED_SECRET }}
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout 🛎️
