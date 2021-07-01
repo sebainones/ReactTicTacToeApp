@@ -38,6 +38,7 @@ jobs:
     #GitHub sets default environment variables that are available to every step in a workflow run.
     env:
       SOME_ENV_MESSAGE: Have a nice CI/CD!
+      SOME_USED_SECRET: ${{ secrets.SOME_SECRET }}
     
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -45,8 +46,9 @@ jobs:
         run: |
           echo "Hello ${{ github.event.inputs.name }}!"
           echo "on location ${{ github.event.inputs.home }}!"
-          echo "message: ${{ env.SOME_ENV_MESSAGE }}"
-          echo "on os: ${{ runner.os }}"
+          echo "message: "
+          echo "on os: ${{ runner.os }}"${{ env.SOME_ENV_MESSAGE }}
+          echo "the scret value is : ${{ env.SOME_USED_SECRET }}"
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout 🛎️
