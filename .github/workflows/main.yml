@@ -39,6 +39,8 @@ jobs:
     env:
       SOME_ENV_MESSAGE: Have a nice CI/CD!
       SOME_USED_SECRET: ${{ secrets.SOME_SECRET }}
+      ANOTHER_USED_SECRET: ${{ secrets.ANOTHER_SECRET_NAME }}
+       
     
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -46,9 +48,9 @@ jobs:
         run: |
           echo "Hello ${{ github.event.inputs.name }}!"
           echo "on location ${{ github.event.inputs.home }}!"
-          echo "message: "
           echo "on os: ${{ runner.os }}"${{ env.SOME_ENV_MESSAGE }}
-          echo "the scret value is :" ${{ env.SOME_USED_SECRET }}
+          echo "Environment secret:" ${{ env.SOME_USED_SECRET }}
+          echo "Repository secret: ${{ env.ANOTHER_USED_SECRET }!"
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout 🛎️
