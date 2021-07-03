@@ -38,7 +38,7 @@ jobs:
     #GitHub sets default environment variables that are available to every step in a workflow run.
     env:
       SOME_ENV_MESSAGE: Have a nice CI/CD!
-      SOME_USED_SECRET: ${{ secrets.SOME_SECRET }}
+      SOME_USED_SECRET: '${{ secrets.SOME_SECRET }}'
       ANOTHER_USED_SECRET: ${{ secrets.ANOTHER_SECRET_NAME }}
        
     
