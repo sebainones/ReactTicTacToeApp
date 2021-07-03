@@ -35,18 +35,29 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
+
+    # The environment this job references
+    environment:
+      name: SebEnvironmet
+   
+
      #GitHub sets default environment variables that are available to every step in a workflow run.
+
     env:
       SOME_ENV_MESSAGE: Have a nice CI/CD!
+      SOME_USED_SECRET: '${{ secrets.SOME_SECRET }}'
+      ANOTHER_USED_SECRET: ${{ secrets.ANOTHER_SECRET_NAME }}
+       
     
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Basic variable usage 🔣      
         run: |
-          echo "Hello ${{ github.event.inputs.name }}!"
+          echo "Hello ${{ github.event.inputs.name }}"
           echo "on location ${{ github.event.inputs.home }}!"
-          echo "message: ${{ env.SOME_ENV_MESSAGE }}"
-          echo "on os: ${{ runner.os }}"
+          echo "on os: ${{ runner.os }}" ${{ env.SOME_ENV_MESSAGE }}
+          echo "Environment secret: ${{ env.SOME_USED_SECRET }}"
+          echo "Repository  secret: ${{ env.ANOTHER_USED_SECRET }}"
 
   # This workflow contains a single job called "build"
   build:
