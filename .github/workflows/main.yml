@@ -50,7 +50,7 @@ jobs:
           echo "on location ${{ github.event.inputs.home }}!"
           echo "on os: ${{ runner.os }}" ${{ env.SOME_ENV_MESSAGE }}
           echo "Environment secret: ${{ env.SOME_USED_SECRET }}"
-          echo "Repository  secret: ${{ env.ANOTHER_USED_SECRET }"
+          echo "Repository  secret: ${{ env.ANOTHER_USED_SECRET }}"
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout 🛎️
