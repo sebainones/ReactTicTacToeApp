@@ -34,6 +34,10 @@ jobs:
     name: Build job
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+
+    # The environment this job references
+    environment:
+      name: SebEnvironmet
     
     #GitHub sets default environment variables that are available to every step in a workflow run.
     env:
